@@ -14,7 +14,7 @@ export const uploadImage = async (file) => {
       formData
     );
 
-    return res.data.secure_url;
+    return res.data.secure_url || "";
   } catch (err) {
     console.error("Image upload failed:", err);
     return "";
